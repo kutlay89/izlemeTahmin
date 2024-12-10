@@ -61,7 +61,6 @@ extension endPoint:netwtokCallerConstantProtocol{
         }
     }
     
-    ///28/recommendations?language=tr-TR&api_key=6bbb49a5c6e3ab5bf9deb9a5672b18d4
 
     var genreUrl: String {
         switch self {
@@ -86,7 +85,7 @@ extension endPoint:netwtokCallerConstantProtocol{
     }
 
     var apiKey: String {
-            return "?language=tr-TR&api_key=6bbb49a5c6e3ab5bf9deb9a5672b18d4"
+            return "?language=tr-TR&api_key=..."
 
     }
     
