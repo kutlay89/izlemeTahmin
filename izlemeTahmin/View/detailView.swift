@@ -25,12 +25,7 @@ class detailView: UIViewController {
         
           
     }
-    /*
-    @IBAction func backButton(_ sender: Any) {
-        
-        performSegue(withIdentifier: "toBack", sender: nil)
-    }
-    */
+
     
     @objc func toBack(swipe:UISwipeGestureRecognizer){
         switch swipe.direction.rawValue{
