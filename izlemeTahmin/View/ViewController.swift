@@ -43,7 +43,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
    
     
     
-    //var delegate : outPutDelegateProtocol?
+    
     let vc = movieViewModel(services: networkCaller())
 
     override func viewDidLoad() {
@@ -71,7 +71,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     func getsAd(){
   
         bannner.delegate = self
-        bannner.adUnitID = "ca-app-pub-3007934319345015/4363349081"
+        bannner.adUnitID = "..."
         bannner.rootViewController = self
         bannner.load(GADRequest())
     }
@@ -101,32 +101,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
        
     }
     
- 
- 
-    init(listCollectionView: UICollectionView!, pickerView: UIPickerView!, moviesArray: [ResultFilm] = [ResultFilm](), trendPerson: [KnownFor] = [KnownFor](), selectedFilm: ResultFilm!, choosenCategory: Int = Int(), selectedCategory: Int = Int(), categoryClass: category = category(), önerilenFilm: [ResultFilm] = [ResultFilm](), delegate: outPutDelegateProtocol? = nil, b : Set<ResultFilm> ) {
-        self.listCollectionView = listCollectionView
-        self.pickerView = pickerView
-        self.moviesArray = moviesArray
-        self.trendPerson = trendPerson
-        self.selectedFilm = selectedFilm
-        self.choosenCategory = choosenCategory
-        self.selectedCategory = selectedCategory
-        self.önerilenFilm = önerilenFilm
-       // self.delegate = delegate
-       
-        
-        super.init(nibName: nil, bundle: nil)
-       
-    
 
-    }
-    
-    required init?(coder: NSCoder) {
-  
-        super.init(coder: coder)
-        
-     
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         randomMovies()
@@ -230,7 +205,8 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     func filmÖner(){
         let tahmin = filmFiltrele(preference: selectedCategory)
         for film in tahmin {
-            let _ = film.genreIDS.map{$0}
+            let x = film.genreIDS.map{$0}
+            print(x)
           
         }
     }
