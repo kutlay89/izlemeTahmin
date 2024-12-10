@@ -38,7 +38,7 @@ class girisView: UIViewController,GADBannerViewDelegate {
         // banner reklam
         banner.delegate = self
      
-        banner.adUnitID = "ca-app-pub-3007934319345015/7723838157"
+        banner.adUnitID = "..."
         banner.rootViewController = self
         banner.load(GADRequest())
     }
